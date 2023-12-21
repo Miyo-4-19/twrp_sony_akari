@@ -51,22 +51,17 @@ NEED_KERNEL_MODULE_SYSTEM := true
 
 # Kernel Cmdline
 BOARD_KERNEL_CMDLINE := \
-    androidboot.console=ttyMSM0 \
+        androidboot.console=ttyMSM0 \
 	androidboot.hardware=qcom \
-    console=ttyMSM0,115200n8 \
-    earlycon=msm_geni_serial,0xA84000 \
-	video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 \
+        console=ttyMSM0,115200n8 \
+        earlycon=msm_geni_serial,0xA84000 \
 	ehci-hcd.park=3 \
 	lpm_levels.sleep_disabled=1 \
 	service_locator.enable=1 \
 	swiotlb=2048 \
-	firmware_class.path=/vendor/firmware_mnt/image \
 	androidboot.configfs=true \
 	loop.max_part=7 \
 	androidboot.usbcontroller=a600000.dwc3 \
-	oemboot.earlymount=/dev/block/platform/soc/1d84000.ufshc/by-name/oem:/mnt/oem:ext4:ro,barrier=1:wait,slotselect,first_stage_mount \
-	panic_on_err=1 \
-	loop.max_part=7 \
 	msm_drm.dsi_display0=dsi_panel_cmd_display:config0
 
 # Assert
